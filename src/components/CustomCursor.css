@@ -1,0 +1,34 @@
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+.cursor-dot, .cursor-circle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10000000;
+}
+
+/* Small cursor dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Larger outer circle */
+.cursor-circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #696969;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* Apply invert effect on hover */
+.backdrop-invert {
+  backdrop-filter: invert(100%);
+}
